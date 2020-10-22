@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="data_processor.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("Blurry_Image.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1.title {
+    font-family: sans-serif;
+    background-color: #4b507b5e;
+    font-size: 55px;
+    color: white;
+    border: 3px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+div#q1 {
+    width: 50%;
+    background-color: #00f4ff38;
+    padding: 15px;
+    font-size: 20px;
+}
+
+div#q2 {
+    width: 50%;
+    background-color: #da2acd38;
+    padding: 15px;
+    font-size: 20px;
+}
+
+div#q3 {
+    width: 50%;
+    background-color: #ffeb3b6e;
+    padding: 15px;
+    font-size: 20px;
+}
+
+div#q4 {
+    width: 50%;
+    background-color: #ff6f6f8a;
+    padding: 15px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div#q5 {
+    width: 50%;
+    background-color: #0200001f;
+    padding: 15px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label#q_1_label_class {
+    background-color: #00ffdb70;
+    padding: 10px;
+    padding-left: 31px;
+    border: 2px solid white;
+}
+
+button.submit {
+    color: black;
+    background-color: #f1f1f1;
+    padding: 9px;
+    box-shadow: beige;
+}
+
+select#uiLocations {
+    color: white;
+    text-align: center;
+    background-color: #477f84;
+    border: 3px solid white;
+}
+
+input#sqft {
+    color: white;
+    text-align: center;
+    background-color: #411c4091;
+    border: 3px solid white;
+}
+
+p#testd {
+    font-size: 45px;
+    background-color: #00000063;
+    border: 1px solid white;
+    width: 100%;
+    text-align: center;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  
+  <h1 class='title'>Price Prediction</h1>
+
+  <!-- ********** -->
+  <!-- Bedrooms [START] -->
+  <div class="container", id='q1'>
+
+    <p>Please select the number of bedrooms:</p>
+
+    <form>
+      <label class="radio-inline" id='q_1_label_class'>
+        <input type="radio" name="optradio", id='Bed1' checked>1
+      </label>
+      <label class="radio-inline" id='q_1_label_class'>
+        <input type="radio" name="optradio", id='Bed2'>2
+      </label>
+      <label class="radio-inline" id='q_1_label_class'>
+        <input type="radio" name="optradio", id='Bed3'>3
+      </label>
+    </form>
+
+  </div>
+  <!-- Bedrooms [END] -->
+
+  <!-- ********** -->
+  <!-- Bathrooms [START] -->
+  <div class="container", id='q2'>
+
+    <p>Please select the number of bathrooms:</p>
+
+    <form>
+      <label class="radio-inline" id='q_1_label_class'>
+        <input type="radio" name="optradio" id='Bath1' checked>1
+      </label>
+      <label class="radio-inline" id='q_1_label_class'>
+        <input type="radio" name="optradio" id='Bath2'>2
+      </label>
+      <label class="radio-inline" id='q_1_label_class'>
+        <input type="radio" name="optradio" id='Bath3'>3
+      </label>
+    </form>
+  </div>
+  <!-- Bathrooms [END] -->
+
+  <!-- ********** -->
+  <!-- Square Feet [START] -->
+  <div class="container", id='q3'>
+
+    <p>Please enter the Square Feet:</p>
+    <input type="text" id="sqft" value='1000'>
+  
+  </div>
+  <!-- Square Feet [END] -->
+
+<!-- ********** -->
+<!-- Location [START] -->
+<div id='q4'>
+  <p>Location</p>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+    <option>Electronic City</option>
+        <option>Rajaji Nagar</option>
+  </select>
+</div>
+<!-- Location [START] -->
+
+  
+  <!--div id='q5'>
+      <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price
+      </button>
+  </div-->
+
+  <div id='q5'>
+      <button class="submit" onclick="myFunction()">Estimate Price
+      </button>
+  </div>
+  
+  <div id="uiEstimatedPrice" class="result">  <h2></h2> </div>
+
+  <p id="testa"></p>
+  <p id="testb"></p>
+  <p id="testc"></p>
+  <p id="testd"></p>
+
+<script>
+
+</script>
+ 
+</body>
+</html>
+
