@@ -61,7 +61,7 @@
 * Algorithms need to work with numbers to work. Therefore, one-hot-encoding was necessary in converting the qualatitaive data to quantitative.
 * Therefore, the location attribute was converted
 From:
-<img src='images/plot_b.png' width='auto' height='25%'>
+<img src='images/plot_b.png' width='25%' height='25%'>
 To:
 <img src='images/plot_c.png' width='25%' height='25%'>
 
