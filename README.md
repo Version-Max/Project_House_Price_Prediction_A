@@ -62,25 +62,21 @@
 * Therefore, the location attribute was converted
 
 From:
-<img src='images/plot_b.png' width='25px' height='100px'>
+<img src='images/plot_b.png' width='115px' height='300px'>
 To:
-<img src='images/plot_c.png' width='25%' height='25%'>
-
-## Selecting number of Ks:
-
-* Sklearn's KMeans provides us a silhoutte function. This function ranges from (-1, 1).
-* Our aim is to get a silhouette score leaning more to 1.
-* n = 3 clusters gave us a score of 0.47 for IQR data and 0.48 for PCA data.
+<img src='images/plot_c.png' width='45%' height='45%'>
 
 ## Model Building:
 
-* Using n = 3 we built a model for stock's standardized IQR_data.
-* The standardized IQR for stocks were able to clearly cluster itself:
-<img src='images/plot_6.png' width='25%' height='25%'>
+* 3 algorithms were tested to build the model - Linear Regression, Lasso, and DecisionTree.
+* The following are the results of each algorithm:
+* Linear Regression:
+<img src='images/plot_d.png' width='25%' height='25%'>
+* Lasso:
+<img src='images/plot_e.png' width='25%' height='25%'>
+* Decision Tree:
+<img src='images/plot_f.png' width='25%' height='25%'>
 
-* Stock's PCA dataset was also model with 3 clusters.
-* The following is the distinct cluster the PCA with 2 components was able to achieve:
-<img src='images/plot_7.png' width='25%' height='25%'>
 
 ## Conclusion:
 
