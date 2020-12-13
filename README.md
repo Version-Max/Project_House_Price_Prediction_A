@@ -52,23 +52,18 @@
 ## Visualization:
 
 * In order to make sure the data after an exhaustive cleanup had a normalized feel to it the following visualization was the result:
-<img src='/images/plot_a.png' width='50%' height='50%'>
+<img src='/images/plot_a.png' width='25%' height='25%'>
 
-* We decided to use 3 standardization methods to devoid any of the attributes from distorting the clusters.
-* Methods to standardize: Z-Score Standardization, Min-Max-Standardization and Inter-Quartile-Range (IQR) Standardization.
-* The following are the plots of such standardizations:
-<img src='images/plot_2.png' width='25%' height='25%'>
-<img src='images/plot_3.png' width='25%' height='25%'>
-<img src='images/plot_4.png' width='25%' height='25%'>
+* Looking at the visualizations it seemed safe to move forward with one hot encoding.
 
-* Looking at the visualizations and scales it was decided to go for IQR standardized dataset
+## One Hot Encoding:
 
-## Exploring PCA:
-
-* PCA was explored to help model building gain speed.
-* PCA was a choice to explore dimensionality reduction because of its strength to lower the weight of the data without losing any significant meaning.
-* We discovered 2 components were able to give us almost 100% of variation in the data:
-<img src='images/plot_5.png' width='25%' height='25%'>
+* Algorithms need to work with numbers to work. Therefore, one-hot-encoding was necessary in converting the qualatitaive data to quantitative.
+* Therefore, the location attribute was converted
+From:
+<img src='images/plot_b.png' width='auto' height='25%'>
+To:
+<img src='images/plot_c.png' width='25%' height='25%'>
 
 ## Selecting number of Ks:
 
