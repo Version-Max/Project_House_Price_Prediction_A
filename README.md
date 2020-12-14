@@ -71,11 +71,11 @@ To:
 * 3 algorithms were tested to build the model - Linear Regression, Lasso, and DecisionTree.
 * The following are the results of each algorithm:
 * Linear Regression:
-<img src='images/plot_d.png' width='25%' height='25%'>
-* Lasso:
-<img src='images/plot_e.png' width='25%' height='25%'>
-* Decision Tree:
 <img src='images/plot_f.png' width='25%' height='25%'>
+* Lasso:
+<img src='images/plot_d.png' width='25%' height='25%'>
+* Decision Tree:
+<img src='images/plot_e.png' width='25%' height='25%'>
 
 
 ## Conclusion:
