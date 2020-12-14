@@ -80,5 +80,11 @@ To:
 
 ## Conclusion:
 
-* With the silhouette method and clustering analysis through visualization we have two models at hand.
-* The models equally perform well but are designed to serve a comprehensive operation by using PCA and IQR standardized data.
+* Linear Regression was selected as the ultimate choice for model building. Linear Regression's score and cross validation on test data gave stronger results compared to the other algorithms tested.
+
+
+## Model Deployment:
+
+* With the help of Pickle library the model was exported as an API.
+* Using Flask a server was created to onboard the API and serve an interactable webpage that lets users input the location, bedrooms and bathroom to get the price prediction:
+<img src='images/plot_g.png' width='45%' height='45%'>
