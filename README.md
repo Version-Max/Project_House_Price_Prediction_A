@@ -89,4 +89,4 @@ To:
 * Using Flask a server was created to onboard the API and serve an interactable webpage that lets users input the location, bedrooms and bathroom to get the price prediction:
 <img src='images/plot_g.png' width='45%' height='45%'>
 
-### The file with detailed step-by-step code is (here) {/Price_Prediction_of_homes.ipynb}
+### The file with detailed step-by-step code is [here](/Price_Prediction_of_homes.ipynb).
